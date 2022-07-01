@@ -10,17 +10,26 @@ import org.junit.jupiter.api.Test;
  * */
 
 class MoodAnalyserTest {
-	@Test
-	void test() {
+	/*Tc1.2-For Sad Mood
+	 * @Test
+	void testForSadMood() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser();
 		String result = moodAnalyser.analyseMood("I am in sad mood");
 		assertEquals("SAD", result);
 	}
 	
+	Tc1.1-For Happy Mood
 	@Test
 	void testForHappyMood() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser();
 		String result = moodAnalyser.analyseMood("I am in Happy mood");
 		assertEquals("HAPPY", result);
+	}*/
+	
+	@Test
+	void testForHappyMood() {
+		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Sad Mood");
+		assertEquals("SAD", moodAnalyser.analyseMood());
 	}
+	
 }
