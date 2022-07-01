@@ -27,9 +27,17 @@ class MoodAnalyserTest {
 	}*/
 	
 	@Test
-	void testForHappyMood() {
+	void testForSadMood() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Sad Mood");
 		assertEquals("SAD", moodAnalyser.analyseMood());
 	}
+	
+	@Test
+	void testForHappyMood() {
+		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy Mood");
+		assertEquals("HAPPY", moodAnalyser.analyseMood());
+	}
+	
+	
 	
 }
