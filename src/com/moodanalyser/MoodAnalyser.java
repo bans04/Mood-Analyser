@@ -1,13 +1,20 @@
 package com.moodanalyser;
 /*
  * Given “I am in Sad Mood” message Should Return SAD
+ * Refactor the code to take the mood message in Constructor
  * 
  * @ Dnyandeo Bansode
  * 
  * */
 
 public class MoodAnalyser {
-	public String analyseMood(String message) {
+	String message;
+	
+	public MoodAnalyser(String message) {
+		this.message = message;
+	}
+
+	public String analyseMood() {
 		if(message.equalsIgnoreCase("I am in sad mood")){
 			return "SAD";
 		}
@@ -15,8 +22,9 @@ public class MoodAnalyser {
 	}
 
 	public static void main(String[] args) {
-		MoodAnalyser moodAnalyser = new MoodAnalyser();
-		String result = moodAnalyser.analyseMood("I am in sad mood");
-		System.out.println(result);
+		MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Sad mood");
+		//String result = moodAnalyser.analyseMood("I am in Sad mood");
+		//System.out.println(result);
+		System.out.println(moodAnalyser.analyseMood());
 	}
 }
